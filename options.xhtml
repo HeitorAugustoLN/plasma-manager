@@ -1988,6 +1988,32 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.configFile._name_._name_._name_.escapeValue"></a><a class="term" href="options.xhtml#opt-programs.plasma.configFile._name_._name_._name_.escapeValue"><code class="option">programs.plasma.configFile.&lt;name&gt;.&lt;name&gt;.&lt;name&gt;.escapeValue</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to escape the value according to kde’s escape-format. See:
+https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+for info about this format.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/files.nix" target="_top">
+&lt;plasma-manager/modules/files.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.configFile._name_._name_._name_.immutable"></a><a class="term" href="options.xhtml#opt-programs.plasma.configFile._name_._name_._name_.immutable"><code class="option">programs.plasma.configFile.&lt;name&gt;.&lt;name&gt;.&lt;name&gt;.immutable</code>
   </a>
  </span>
@@ -2113,6 +2139,32 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.dataFile._name_._name_._name_.escapeValue"></a><a class="term" href="options.xhtml#opt-programs.plasma.dataFile._name_._name_._name_.escapeValue"><code class="option">programs.plasma.dataFile.&lt;name&gt;.&lt;name&gt;.&lt;name&gt;.escapeValue</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to escape the value according to kde’s escape-format. See:
+https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+for info about this format.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/files.nix" target="_top">
+&lt;plasma-manager/modules/files.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.dataFile._name_._name_._name_.immutable"></a><a class="term" href="options.xhtml#opt-programs.plasma.dataFile._name_._name_._name_.immutable"><code class="option">programs.plasma.dataFile.&lt;name&gt;.&lt;name&gt;.&lt;name&gt;.immutable</code>
   </a>
  </span>
@@ -2226,6 +2278,32 @@ attribute set of attribute set of attribute set of ((submodule) or (null or bool
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/files.nix" target="_top">
+&lt;plasma-manager/modules/files.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.file._name_._name_._name_.escapeValue"></a><a class="term" href="options.xhtml#opt-programs.plasma.file._name_._name_._name_.escapeValue"><code class="option">programs.plasma.file.&lt;name&gt;.&lt;name&gt;.&lt;name&gt;.escapeValue</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to escape the value according to kde’s escape-format. See:
+https://github.com/KDE/kconfig/blob/44f98ff5cb9008436ba5ba385cae03bbd0ab33e6/src/core/kconfigini.cpp#L882
+for info about this format.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -7969,6 +8047,363 @@ null or (positive integer, meaning &gt;0)</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.enable"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.enable"><code class="option">programs.plasma.kwin.scripts.polonium.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.enableDebug"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.enableDebug"><code class="option">programs.plasma.kwin.scripts.polonium.settings.enableDebug</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable debug for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.borderVisibility"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.borderVisibility"><code class="option">programs.plasma.kwin.scripts.polonium.settings.borderVisibility</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The border visibility setting for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “noBorderAll”, “noBorderTiled”, “borderSelected”, “borderAll”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;noBorderAll&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.callbackDelay"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.callbackDelay"><code class="option">programs.plasma.kwin.scripts.polonium.settings.callbackDelay</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The callback delay setting for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 1 and 200 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">100</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.filter.processes"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.filter.processes"><code class="option">programs.plasma.kwin.scripts.polonium.settings.filter.processes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The processes to filter for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">[
+  &quot;firefox&quot;
+  &quot;chromium&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.filter.windowTitles"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.filter.windowTitles"><code class="option">programs.plasma.kwin.scripts.polonium.settings.filter.windowTitles</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The window titles to filter for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">[
+  &quot;Discord&quot;
+  &quot;Telegram&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.layout.engine"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.layout.engine"><code class="option">programs.plasma.kwin.scripts.polonium.settings.layout.engine</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The layout engine setting for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “binaryTree”, “half”, “threeColumn”, “monocle”, “kwin”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;binaryTree&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.layout.insertionPoint"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.layout.insertionPoint"><code class="option">programs.plasma.kwin.scripts.polonium.settings.layout.insertionPoint</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The insertion point setting for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “left”, “right”, “activeWindow”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;top&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.layout.rotate"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.layout.rotate"><code class="option">programs.plasma.kwin.scripts.polonium.settings.layout.rotate</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to rotate layout for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.maximizeSingleWindow"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.maximizeSingleWindow"><code class="option">programs.plasma.kwin.scripts.polonium.settings.maximizeSingleWindow</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to maximize single window for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.resizeAmount"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.resizeAmount"><code class="option">programs.plasma.kwin.scripts.polonium.settings.resizeAmount</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The resize amount setting for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 1 and 450 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">100</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.saveOnTileEdit"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.saveOnTileEdit"><code class="option">programs.plasma.kwin.scripts.polonium.settings.saveOnTileEdit</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to save on tile edit for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.kwin.scripts.polonium.settings.tilePopups"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.scripts.polonium.settings.tilePopups"><code class="option">programs.plasma.kwin.scripts.polonium.settings.tilePopups</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to tile popups for Polonium</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.kwin.titlebarButtons.left"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.titlebarButtons.left"><code class="option">programs.plasma.kwin.titlebarButtons.left</code>
   </a>
  </span>
@@ -10509,6 +10944,264 @@ null or string</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;Breeze_Snow&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.alignment"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.alignment"><code class="option">programs.plasma.workspace.desktop.icons.alignment</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to align the icons on the left (the default) or right
+side of the screen.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “left”, “right”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;right&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.arrangement"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.arrangement"><code class="option">programs.plasma.workspace.desktop.icons.arrangement</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The direction, in which desktop icons are to be arranged.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “leftToRight”, “topToBottom”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;topToBottom&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.folderPreviewPopups"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.folderPreviewPopups"><code class="option">programs.plasma.workspace.desktop.icons.folderPreviewPopups</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Enables the arrow button when hovering over a folder on the desktop
+which shows a preview popup of the folder’s contents.
+Is enabled by default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.lockInPlace"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.lockInPlace"><code class="option">programs.plasma.workspace.desktop.icons.lockInPlace</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Locks the position of all desktop icons to the order and placement
+defined by <code class="literal">arrangement</code>, <code class="literal">alignment</code> and the <code class="literal">sorting</code> options
+so they can’t be manually moved.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.previewPlugins"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.previewPlugins"><code class="option">programs.plasma.workspace.desktop.icons.previewPlugins</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Configures the preview plugins used to preview desktop files and folders.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">[
+  &quot;audiothumbnail&quot;
+  &quot;fontthumbnail&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.size"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.size"><code class="option">programs.plasma.workspace.desktop.icons.size</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The desktop icon size, which is normally configured via a slider
+with seven possible values ranging from small (0) to large (6).
+The fourth position (3) is the default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or integer between 0 and 6 (both inclusive)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">2</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.sorting.descending"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.sorting.descending"><code class="option">programs.plasma.workspace.desktop.icons.sorting.descending</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Reverses the sorting order if enabled. Sorting is ascending by default.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.sorting.foldersFirst"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.sorting.foldersFirst"><code class="option">programs.plasma.workspace.desktop.icons.sorting.foldersFirst</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Folders are sorted separately from files by default. This means
+folders appear first, sorted for example ascending by name,
+followed by files, also sorted ascending by name.
+If this option is disabled, all items are sorted irrespective
+of their type.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/workspace.nix" target="_top">
+&lt;plasma-manager/modules/workspace.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.plasma.workspace.desktop.icons.sorting.mode"></a><a class="term" href="options.xhtml#opt-programs.plasma.workspace.desktop.icons.sorting.mode"><code class="option">programs.plasma.workspace.desktop.icons.sorting.mode</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Specifies the sort mode for the desktop icons. By default they are
+sorted by name.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “date”, “manual”, “name”, “size”, “type”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;type&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
