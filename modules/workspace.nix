@@ -370,7 +370,10 @@ in
         description = ''
           Allows you to configure the widgets on the desktop.
         '';
-        apply = widgets: if widgets == null then null else map widgets.convert widgets;
+        apply = widgets: if widgets == null then null else map (widget: {
+          name = widget.name or "";
+          config = widget.config or {};
+        }) widgets;
       };
     };
   };
