@@ -6,6 +6,7 @@
 let
   cfg = config.programs.plasma;
   hasWidget = widgetName: builtins.any (panel: builtins.any (widget: widget.name == widgetName) panel.widgets) cfg.panels;
+  inherit (widgets.lib) addWidgetStmts stringIfNotNull;
 
   # An attrset keeping track of the packages which should be added when a
   # widget is present in the config.
@@ -235,18 +236,12 @@ in
           '' else ""
           );
 
-          desktopWidgets = (if (cfg.workspace.desktopWidgets != null) then ''
+          desktopWidgets = (if (cfg.workspace.desktop.widgets != null) then ''
             // Desktop widgets
             let allDesktops = desktops();
             for (var desktopIndex = 0; desktopIndex < allDesktops.length; desktopIndex++) {
               var desktop = allDesktops[desktopIndex];
-              ${cfg.workspace.desktopWidgets.map(widget => ''
-                var widget = desktop.addWidget("${widget.name}");
-                ${widget.config ? widget.config.map(config => `
-                  widget.writeConfig("${config.key}", "${config.value}");
-                `).join('') : ''}
-                ${widget.extraConfig ? widget.extraConfig : ''}
-              '').join('')}
+              ${addWidgetStmts "desktop" "desktopWidgets" cfg.workspace.desktop.widgets}
             }
           '' else "");
         in
