@@ -234,6 +234,21 @@ in
             }
           '' else ""
           );
+
+          desktopWidgets = (if (cfg.workspace.desktopWidgets != null) then ''
+            // Desktop widgets
+            let allDesktops = desktops();
+            for (var desktopIndex = 0; desktopIndex < allDesktops.length; desktopIndex++) {
+              var desktop = allDesktops[desktopIndex];
+              ${cfg.workspace.desktopWidgets.map(widget => ''
+                var widget = desktop.addWidget("${widget.name}");
+                ${widget.config ? widget.config.map(config => `
+                  widget.writeConfig("${config.key}", "${config.value}");
+                `).join('') : ''}
+                ${widget.extraConfig ? widget.extraConfig : ''}
+              '').join('')}
+            }
+          '' else "");
         in
         {
           preCommands = panelPreCMD;
