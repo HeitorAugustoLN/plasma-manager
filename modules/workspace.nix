@@ -357,7 +357,7 @@ in
       };
 
       widgets = lib.mkOption {
-        type = with lib.types; nullOr (lib.types.listOf widgetsImport.type);
+        type = with lib.types; nullOr (listOf widgetsImport.type);
         default = null;
         example = [
           {

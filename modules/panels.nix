@@ -236,7 +236,7 @@ in
           '' else ""
           );
 
-          desktopWidgets = (if (cfg.workspace.desktop.widgets != null) then ''
+          desktopWidgets = (if (cfg.workspace.desktop.widgets != null && builtins.isList cfg.workspace.desktop.widgets) then ''
             // Desktop widgets
             let allDesktops = desktops();
             for (var desktopIndex = 0; desktopIndex < allDesktops.length; desktopIndex++) {
