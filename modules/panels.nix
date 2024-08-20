@@ -252,7 +252,7 @@ in
         in
         {
           preCommands = panelPreCMD;
-          text = panelLayoutStr + wallpaperDesktopScript + wallpaperSlideShow + wallpaperPOTD + wallpaperPlainColor;
+          text = panelLayoutStr + wallpaperDesktopScript + wallpaperSlideShow + wallpaperPOTD + wallpaperPlainColor + desktopWidgets;
           postCommands = panelPostCMD + wallpaperPostCMD;
           restartServices =
             (lib.unique (if anyNonDefaultScreens then [ "plasma-plasmashell" ] else [ ])
