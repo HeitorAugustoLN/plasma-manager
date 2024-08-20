@@ -373,6 +373,7 @@ in
         apply = widgets: if widgets == null then null else map (widget: {
           name = widget.name or "";
           config = widget.config or {};
+          extraConfig = widget.extraConfig or "";
         }) widgets;
       };
     };
