@@ -166,7 +166,7 @@ let
       <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
       <gui name="${name}" ${setTranslationDomain} version="${toString version}">
         ${
-          lib.optionalString (menubar != null) ''
+          lib.mkIf (menubar != null) ''
             <MenuBar <alreadyVisited="${menubar.alreadyVisited}">
               ${
                 lib.concatMapStringsSep "\n" (menu: ''
@@ -183,7 +183,7 @@ let
           ''
         }
         ${
-          lib.optionalString (toolbar != null) ''
+          lib.mkIf (toolbar != null) ''
             <ToolBar alreadyVisited="${toolbar.alreadyVisited}" name="${toolbar.name}" noMerge="${toolbar.noMerge}">
               ${
                 lib.concatMapStringsSep "\n" (item: ''
@@ -194,7 +194,7 @@ let
           ''
         }
         ${
-          lib.optionalString (actionProperties != null) ''
+          lib.mkIf (actionProperties != null) ''
             ${lib.concatMapStringsSep "\n" (actionProperties: ''
               <ActionProperties scheme="${actionProperties.scheme}">
                 ${
