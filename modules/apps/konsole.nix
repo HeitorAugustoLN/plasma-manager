@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   inherit (import ../../lib/types.nix { inherit lib; inherit config; }) basicSettingsType;
+  inherit (import ../../lib/kxmlgui.nix { inherit lib; }) generateKxmlgui kxmlguiType;
 
   # used as shown in the example in the library docs:
   # https://ryantm.github.io/nixpkgs/functions/library/attrsets/#function-library-lib.attrsets.mapAttrs-prime
@@ -127,6 +128,14 @@ in
         Extra config to add to konsolerc.
       '';
     };
+
+    toolbar = lib.mkOption {
+      type = lib.types.nullOr kxmlguiType;
+      default = null;
+      description = ''
+        The toolbar configuration for Konsole.
+      '';
+    };
   };
 
   config = lib.mkIf (cfg.enable) {
@@ -155,7 +164,7 @@ in
     xdg.dataFile = lib.mkMerge [
       (lib.mkIf (cfg.profiles != { })
         (
-          lib.mkMerge ([
+          lib.mkMerge [
             (
               lib.mkMerge (
                 lib.mapAttrsToList
@@ -194,10 +203,19 @@ in
                   cfg.profiles
               )
             )
-          ])
+          ]
         )
       )
       (createColorSchemes cfg.customColorSchemes)
+      (lib.mkIf (cfg.toolbar != null) {
+        "kxmlgui5/konsole/konsoleui.rc".text = generateKxmlgui {
+          name = cfg.toolbar.name;
+          version = cfg.toolbar.version;
+          menubar = cfg.toolbar.menubar;
+          toolbar = cfg.toolbar.toolbar;
+          actionProperties = cfg.toolbar.actionProperties;
+        };
+      })
     ];
   };
 }
