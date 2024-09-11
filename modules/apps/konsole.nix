@@ -214,9 +214,9 @@ in
       (createColorSchemes cfg.customColorSchemes)
       (lib.mkIf (cfg.toolbar != null) {
         "kxmlgui5/konsole/konsoleui.rc".text =
-          generateKxmlgui cfg.toolbar.name cfg.toolbar.version cfg.toolbar.menubar
+          (generateKxmlgui cfg.toolbar.name cfg.toolbar.version cfg.toolbar.menubar
             cfg.toolbar.actionProperties
-            cfg.toolbar.translationDomain;
+            cfg.toolbar.translationDomain);
       })
     ];
   };
