@@ -137,14 +137,7 @@ let
   };
 
   generateKxmlgui =
-    {
-      name,
-      version,
-      menubar,
-      toolbar,
-      actionProperties,
-      translationDomain ? null,
-    }:
+    name: version: menubar: toolbar: actionProperties: translationDomain:
     let
       setTranslationDomain = lib.optionalString (
         translationDomain != null
