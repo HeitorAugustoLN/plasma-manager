@@ -214,6 +214,7 @@ in
           menubar = cfg.toolbar.menubar;
           toolbar = cfg.toolbar.toolbar;
           actionProperties = cfg.toolbar.actionProperties;
+          translationDomain = cfg.toolbar.translationDomain;
         };
       })
     ];
