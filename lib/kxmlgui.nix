@@ -18,7 +18,8 @@ let
         description = "The translation domain of the application";
       };
       menubar = lib.mkOption {
-        type = lib.types.listOf (
+        default = null;
+        type = lib.types.nullOr lib.types.listOf (
           lib.types.submodule {
             options = {
               name = lib.mkOption {
@@ -61,7 +62,8 @@ let
         );
       };
       toolbar = lib.mkOption {
-        type = lib.types.submodule {
+        default = null;
+        type = lib.types.nullOr lib.types.submodule {
           options = {
             name = lib.mkOption {
               type = lib.types.str;
@@ -102,7 +104,8 @@ let
         };
       };
       actionProperties = lib.mkOption {
-        type = lib.types.listOf (
+        default = null;
+        type = lib.types.nullOr lib.types.listOf (
           lib.types.submodule {
             options = {
               scheme = lib.mkOption {
