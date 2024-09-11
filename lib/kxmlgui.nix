@@ -52,6 +52,11 @@ let
                         type = lib.types.str;
                         description = "The value of the item";
                       };
+                      group = lib.mkOption {
+                        type = lib.types.nullOr lib.types.str;
+                        default = null;
+                        description = "The group of the item";
+                      };
                     };
                   }
                 );
@@ -94,6 +99,11 @@ let
                     value = lib.mkOption {
                       type = lib.types.str;
                       description = "The value of the item";
+                    };
+                    group = lib.mkOption {
+                      type = lib.types.nullOr lib.types.str;
+                      default = null;
+                      description = "The group of the item";
                     };
                   };
                 }
@@ -143,16 +153,18 @@ let
         translationDomain != null
       ) ''translationDomain="${translationDomain}"'';
 
+      setGroup = group: lib.optionalString (group != null) ''group="${group}"'';
+
       generateItem =
         item:
         if item.type == "action" then
-          ''<Action name="${item.value}"/>''
+          ''<Action ${setGroup item.group} name="${item.value}"/>''
         else if item.type == "group" then
           ''<DefineGroup name="${item.value}"/>''
         else if item.type == "text" then
           "<text ${setTranslationDomain}>${item.value}</text>"
         else
-          "<Separator/>";
+          "<Separator ${setGroup item.group}/>";
 
       generateActionProperty =
         property: ''<Action name="${property.name}" shortcut="${property.shortcut}">'';
