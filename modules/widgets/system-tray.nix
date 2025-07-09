@@ -220,11 +220,8 @@ in
         name = "org.kde.plasma.systemtray";
         extraConfig = ''
           (widget) => {
-            const tray = desktopById(widget.readConfig("SystrayContainmentId"));
-            if (!tray) return; // if somehow the containment doesn't exist
-
-            ${widgets.lib.setWidgetSettings "tray" mergedSettings}
-            ${widgets.lib.addWidgetStmts "tray" "trayWidgets" items.configs}
+            ${widgets.lib.setWidgetSettings "widget" mergedSettings}
+            ${widgets.lib.addWidgetStmts "widget" "trayWidgets" items.configs}
           }
         '';
       };
