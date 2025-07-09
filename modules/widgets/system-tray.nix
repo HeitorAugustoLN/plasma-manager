@@ -221,7 +221,6 @@ in
         extraConfig = ''
           (widget) => {
             ${widgets.lib.setWidgetSettings "widget" mergedSettings}
-            ${widgets.lib.addWidgetStmts "widget" "trayWidgets" items.configs}
           }
         '';
       };
