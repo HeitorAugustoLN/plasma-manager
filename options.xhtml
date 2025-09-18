@@ -3067,6 +3067,32 @@ null or package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.kate.dap.customServers"></a><a class="term" href="options.xhtml#opt-programs.kate.dap.customServers"><code class="option">programs.kate.dap.customServers</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Add more DAP server settings here. Check out the format on the
+<a class="link" href="https://docs.kde.org/stable5/en/kate/kate/kate-application-plugin-gdb.html"  target="_top">Kate Documentation</a>.
+Note that these are only the settings; the appropriate packages have to be installed separately.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (attribute set)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/apps/kate" target="_top">
+&lt;plasma-manager/modules/apps/kate&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.kate.editor.brackets.automaticallyAddClosing"></a><a class="term" href="options.xhtml#opt-programs.kate.editor.brackets.automaticallyAddClosing"><code class="option">programs.kate.editor.brackets.automaticallyAddClosing</code>
   </a>
  </span>
@@ -4376,7 +4402,7 @@ string</p>
 Due to Konsole limitations, only a limited range of sizes is possible.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-integer between 4 and 128 (both inclusive)</p>
+integer or floating point number between 4 and 128 (both inclusive)</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">10</code></p>
@@ -11371,6 +11397,30 @@ null or one of “fade”, “slide”, “off”</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.plasma.kwin.effects.desktopSwitching.navigationWrapping"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.effects.desktopSwitching.navigationWrapping"><code class="option">programs.plasma.kwin.effects.desktopSwitching.navigationWrapping</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to wrap around when switching through virtual desktops.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/plasma-manager/blob/trunk/modules/kwin.nix" target="_top">
+&lt;plasma-manager/modules/kwin.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.plasma.kwin.effects.dimAdminMode.enable"></a><a class="term" href="options.xhtml#opt-programs.plasma.kwin.effects.dimAdminMode.enable"><code class="option">programs.plasma.kwin.effects.dimAdminMode.enable</code>
   </a>
  </span>
@@ -15711,7 +15761,7 @@ null or (positive integer, meaning &gt;0)</p>
 <p>The Plasma desktop wallpaper. Can be either the path to an image file or a KPackage.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or absolute path</p>
+null or absolute path or list of absolute path</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
